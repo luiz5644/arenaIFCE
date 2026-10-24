@@ -1,0 +1,250 @@
+/* ==========================================================================
+   ESTILOS DO RODAPÉ (Footer.css)
+   ========================================================================== */
+
+.footer-principal {
+  width: 100%;
+  background-color: var(--cor-fundo-rodape, #F0EBE0);
+  color: var(--cor-texto, #2B2420);
+  padding: 64px 24px 32px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(43, 36, 32, 0.08);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grade de 4 Colunas no Desktop */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-coluna {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Coluna 1: Marca */
+.footer-logo-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.footer-logo-nome {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--cor-texto, #2B2420);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.footer-logo-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--cor-primaria, #C8461A);
+  text-transform: uppercase;
+}
+
+.footer-descricao {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--cor-texto-suave, #6E655F);
+  margin: 0;
+  max-width: 320px;
+}
+
+/* Títulos das Colunas */
+.footer-coluna-titulo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-texto, #2B2420);
+  margin: 0 0 16px 0;
+}
+
+/* Textos e Listas do Rodapé */
+.footer-conteudo-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--cor-texto-suave, #6E655F);
+  line-height: 1.5;
+}
+
+.footer-link-destaque {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cor-primaria, #C8461A);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-link-destaque:hover {
+  color: var(--cor-primaria-hover, #AA3812);
+  transform: translateX(2px);
+}
+
+/* Horários de Funcionamento */
+.footer-lista-horarios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-item-horario {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--cor-texto-suave, #6E655F);
+}
+
+.footer-horario-dias {
+  font-weight: 600;
+  color: var(--cor-texto, #2B2420);
+  min-width: 82px;
+}
+
+.footer-horario-horas {
+  color: var(--cor-texto-suave, #6E655F);
+}
+
+/* Contato e Ícones Sociais */
+.footer-conteudo-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contato-link {
+  font-size: 0.88rem;
+  color: var(--cor-texto-suave, #6E655F);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contato-link:hover {
+  color: var(--cor-primaria, #C8461A);
+}
+
+/* Ícones Sociais em Quadradinhos com Borda */
+.footer-redes-sociais {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(43, 36, 32, 0.18);
+  background-color: rgba(255, 255, 255, 0.6);
+  color: var(--cor-texto, #2B2420);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-social-btn:hover {
+  background-color: var(--cor-primaria, #C8461A);
+  color: #FFFFFF;
+  border-color: var(--cor-primaria, #C8461A);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(200, 70, 26, 0.2);
+}
+
+/* Linha Divisória */
+.footer-divisor {
+  border: none;
+  border-top: 1px solid rgba(43, 36, 32, 0.12);
+  margin: 48px 0 24px;
+}
+
+/* Faixa Inferior */
+.footer-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--cor-texto-suave, #6E655F);
+}
+
+.footer-copyright {
+  margin: 0;
+}
+
+.footer-links-legais {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-link-legal {
+  color: var(--cor-texto-suave, #6E655F);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link-legal:hover {
+  color: var(--cor-primaria, #C8461A);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Mobile-First)
+   ========================================================================== */
+
+/* Telas Médias / Tablets */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 24px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .footer-principal {
+    padding: 48px 18px 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-inferior {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-links-legais {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

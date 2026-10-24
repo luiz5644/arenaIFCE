@@ -1,17 +1,22 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import Header from './components/Header/Header.jsx'
-
+import CadastroForm from './components/Cadastro/CadastroForm.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <Header/>
+    <div className="app-container">
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      {/* <Modalidades /> */}
+      {/* <Diferenciais /> */}
 
-  )
+      <main className="app-main">
+        <CadastroForm />
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

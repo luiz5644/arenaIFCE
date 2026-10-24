@@ -1,184 +1,59 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+/* ==========================================================================
+   ARENA SUNSET - SISTEMA DE DESIGN & VARIÁVEIS GLOBAIS
+   Trabalho Acadêmico - Incremento 01 (Web 2)
+   Compartilhado entre a equipe para manter a harmonia visual
+   ========================================================================== */
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+:root {
+  /* Paleta de Cores da Identidade Visual */
+  --cor-fundo: #FBF7EF;            /* Creme claro da página */
+  --cor-fundo-rodape: #F0EBE0;     /* Bege ligeiramente mais escuro para o rodapé */
+  --cor-card: #FFFFFF;             /* Branco puro para cards */
+  --cor-input-fundo: #F4EFE6;      /* Fundo creme suave dos campos */
+  
+  /* Cores de Destaque e Ação */
+  --cor-primaria: #C8461A;         /* Laranja terroso principal da marca */
+  --cor-primaria-hover: #AA3812;   /* Tom mais escuro para estados de foco/hover */
+  --cor-secundaria: #4B6490;       /* Azul acinzentado de apoio */
+
+  /* Tipografia e Cores de Texto */
+  --cor-texto: #2B2420;            /* Marrom/cinza escuro para leitura confortável */
+  --cor-texto-suave: #6E655F;      /* Cinza amarronzado para subtítulos e rótulos */
+  --cor-texto-claro: #A39B95;      /* Textos auxiliares e placeholders */
+
+  /* Feedback e Validação */
+  --cor-sucesso: #2E7D32;          /* Verde para confirmações */
+  --cor-sucesso-fundo: #E8F5E9;    /* Fundo suave do card de sucesso */
+  --cor-sucesso-borda: #A5D6A7;
+  --cor-erro: #D32F2F;             /* Vermelho terroso para alertas de erro */
+  --cor-erro-fundo: #FFEBEE;       /* Fundo suave do card de erro */
+  --cor-erro-borda: #FFCDD2;
+
+  /* Bordas, Sombras e Raios */
+  --borda-raio-pequeno: 6px;
+  --borda-raio: 12px;
+  --borda-raio-grande: 20px;
+  --sombra-card: 0 10px 30px rgba(43, 36, 32, 0.08);
+  --sombra-botao: 0 4px 12px rgba(200, 70, 26, 0.25);
+
+  /* Tipografia */
+  --fonte-principal: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
+/* Estrutura principal da aplicação */
+.app-container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
+  min-height: 100vh;
   width: 100%;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-principal);
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
